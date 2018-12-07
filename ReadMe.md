@@ -44,8 +44,10 @@ _07 December, 2018_
 
   ##### `GetAll()`
 
+ Test to see if you can return an empty list and then test to see if you can return a populated list.
+
   FAIL:
-  >To fail this test, our `public static List<Client> GetAll()` will return a dummy list that is not connected to the database. This s because our test database is already an empty database. The dummy List<Client> will contain an object in it.
+  >To fail this test, our `public static List<Client> GetAll()` will return a dummy list that is not connected to the database. This is because our test database is already an empty database. The dummy List<Client> will contain an object in it.
 
   PASS:
 >To pass this test, our `public static List<Client>GetAll()` will return the test database. We replaced the dummy list with a SQL command that returns the test database.
@@ -65,7 +67,7 @@ _07 December, 2018_
   >To fail this test, our   `public void Save()` will not have any logic inside of it. Voids do not need to return anything, so by not including code we can compile the code and fail the test.
 
   PASS
-  >To pass this test, our   `public void Save()` will contain the code for connecting to the Database and the SQL commands necessary for saving to the database.d
+  >To pass this test, our   `public void Save()` will contain the code for connecting to the Database and the SQL commands necessary for saving to the database.
 
 
 

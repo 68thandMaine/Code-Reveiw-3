@@ -68,8 +68,9 @@ namespace HairSalon.Models
       {
         conn.Dispose();
       }
-      List<Client> newList = new List<Client> {};
-      return newList;
+      // List<Client> newList = new List<Client> {};
+      // return newList;
+      return allClients;
     }
     public void Save()
     {
@@ -97,7 +98,19 @@ namespace HairSalon.Models
         conn.Dispose();
       }
     }
-
+    public static void ClearAll()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"DELETE FROM clients;";
+      cmd.ExecuteNonQuery();
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+    }
 
   }
 }
