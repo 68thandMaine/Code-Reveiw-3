@@ -15,9 +15,9 @@ namespace HairSalon.Models
       _id = id;
     }
 
-    // public string GetName()
-    // {
-    //
-    // }
+    public string GetName()
+    {
+    return "gerald";
+    }
   }
 }
