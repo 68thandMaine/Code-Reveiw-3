@@ -9,10 +9,10 @@ namespace HairSalon.Tests
   public class ClientTest
   // : IDisposable
   {
-    // public ClientTest()
-    // {
-    //   DBConfiguration.ConnectionString = "server=localhost;userid=root;password=root;port=8889;database=chris_rudnicky_test;";
-    // }
+    public ClientTest()
+    {
+      DBConfiguration.ConnectionString = "server=localhost;userid=root;password=root;port=8889;database=chris_rudnicky_test;";
+    }
     // public void Dispose()
     // {
     //   Stylist.ClearAll();
@@ -69,7 +69,7 @@ namespace HairSalon.Tests
       CollectionAssert.AreEqual(newList, result);
     }
     [TestMethod]
-    public void Saves_SavesToDatabase_ItemList()
+    public void Saves_SavesToDatabase_ClientList()
     {
       Client newClient = new Client("chris", 1, 1);
       newClient.Save();
@@ -77,5 +77,7 @@ namespace HairSalon.Tests
       List<Client> testList = new List<Client>{newClient};
       CollectionAssert.AreEqual(testList, result);
     }
+    // [TestMethod]
+    // public
   }
 }
