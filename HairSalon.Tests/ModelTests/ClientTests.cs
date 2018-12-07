@@ -58,5 +58,14 @@ namespace HairSalon.Tests
       List<Client> result = Client.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void Saves_SavesToDatabase_ItemList()
+    {
+      Client newClient = new Client("chris", 1);
+      newClient.Save();
+      List<Client> result = Client.GetAll();
+      List<Client> testList = new List<Client>{newClient};
+      CollectionAssert.AreEqual(testList, result);
+    }
   }
 }
