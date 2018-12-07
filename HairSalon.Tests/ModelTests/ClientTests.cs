@@ -39,6 +39,12 @@ namespace HairSalon.Tests
       int result = 1;
       Assert.AreEqual(newClient.GetId(), result);
     }
-
+    [TestMethod]
+    public void GetAll_ReturnsEmptyListFromDatabase_ClientList()
+    {
+      List<Client> newList = new List<Client> { };
+      List<Client> result = Client.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

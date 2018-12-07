@@ -28,7 +28,9 @@ namespace HairSalon.Models
 
     public static List<Client> GetAll()
     {
-
+      Client newClient = new Client("chris", 1, 1);
+      List<Client> newList = new List<Client>{ newClient };
+      return newList;
     }
   }
 }
