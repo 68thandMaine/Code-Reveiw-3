@@ -7,13 +7,13 @@ namespace HairSalon.Models
   public class Client
   {
     private string _name;
-    private int _employeeId;
+    private int _stylistId;
     private int _id;
 
     public Client (string clientName, int employeeId, int id=0)
     {
       _name = clientName;
-      _employeeId = employeeId;
+      _stylistId = employeeId;
       _id = id;
     }
 
@@ -29,6 +29,23 @@ namespace HairSalon.Models
     {
       return _id;
     }
+
+    public override bool Equals(System.Object otherClient)
+    {
+      if(!(otherClient is Client))
+      {
+        return false;
+      }
+      else
+      {
+        Client newClient =(Client) otherClient;
+        bool idEquality =(this.GetId() == newClient.GetId());
+        bool nameEquality = (this.GetName() == newClient.GetName());
+        // bool stylistEquality = (this.GetStylistId == newClient.GetStylistId());
+        return (idEquality && nameEquality);
+      }
+    }
+
 
     public static List<Client> GetAll()
     {
@@ -53,24 +70,28 @@ namespace HairSalon.Models
       }
       return allClients;
     }
-    public void Save()
-    {
-      // MySqlConnection conn = DB.Connection();
-      // conn.Open();
-      // MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-      // cmd.CommandText=@"INSERT INTO clients (name) VALUES (@ClientName);";
-      // MySqlParameter name = new MySqlParameter();
-      // name.ParameterName = "@ClientName";
-      // name.Value = this._name;
-      // cmd.Parameters.Add(name);
-      // cmd.executeNonQuery();
-      // _id = (int) cmd.LastInsertedId;
-      // conn.Close();
-      // if(con != null)
-      // {
-      //   conn.Dispose();
-      // }
-    }
+    // public void Save()
+    // {
+    //   MySqlConnection conn = DB.Connection();
+    //   conn.Open();
+    //   MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+    //   cmd.CommandText=@"INSERT INTO clients (clientName, sylistId) VALUES (@ClientName, @stylistId);";
+    //   MySqlParameter name = new MySqlParameter();
+    //   name.ParameterName = "@clientName";
+    //   name.Value = this._name;
+    //   cmd.Parameters.Add(name);
+    //   MySqlParameter stylistId = new MySqlParameter();
+    //   stylistId.ParameterName = "@stylistId";
+    //   stylistId.Value = this._stylistId;
+    //   cmd.Parameters.Add(stylistId);
+    //   cmd.ExecuteNonQuery();
+    //   _id = (int) cmd.LastInsertedId;
+    //   conn.Close();
+    //   if(conn != null)
+    //   {
+    //     conn.Dispose();
+    //   }
+    // }
 
 
   }
