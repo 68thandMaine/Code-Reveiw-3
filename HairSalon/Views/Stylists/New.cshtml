@@ -1,0 +1,23 @@
+@{
+Layout =
+}
+
+<div class="container">
+<h1>Create a new employee</h1>
+<p>Add the new stylist information into the form below:</p>
+
+<form action ="/stylists" method="post">
+<label for="stylistName">Stylist / new employee name</label>
+<input id="stylistName" name="stylistName" type="text">
+<select class="form-control">
+  <option>Employee rank</option>
+  <option>Manager</option>
+  <option>Supervisor</option>
+  <option>Stylist</option>
+</select>
+<button type="submit">Add new employee to database</button>
+</form>
+
+  <button btn-dark type="submit" action="/">Back home</button>
+  <button btn-dark type="submit" action="/stylists">Back to employee roster</button>
+</div>

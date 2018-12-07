@@ -1,0 +1,23 @@
+@using HairSalon.Models
+@{
+Layout= "_Layout";
+}
+
+<div class ="container">
+  <h1>Employees</h1>
+  @if(@Model.Count == 0)
+  {
+  <h3>There are no employees listed at this location</h3>
+  <p>Add a add new employee button here Chris</p>
+  }
+
+  @foreach (Stylist employee in Model)
+  {
+  <h6> Link following RESTful routing conventions for a show [HttpGet("/categories/{id}")]
+      public ActionResult Show(int id)</h6>
+  }
+
+// should link back to homepage
+
+  <button btn-dark type="submit" action="/">Back home</button>
+</div>
