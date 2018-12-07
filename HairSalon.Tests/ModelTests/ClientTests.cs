@@ -84,11 +84,19 @@ namespace HairSalon.Tests
       Client newClient2 = new Client ("shaina", 2, 3);
       newClient2.Save();
       List<Client> newList = new List<Client> {newClient1, newClient2};
-
       List<Client> result = Client.GetAll();
-
       CollectionAssert.AreEqual(newList, result);
-
+    }
+    
+    [TestMethod]
+    public void Save_AssignsIdToObject_Id()
+    {
+      Client newClient = new Client("chris",1,2);
+      newClient.Save();
+      Client savedClient = Client.GetAll()[0];
+      int result = savedClient.GetId();
+      int testId = newClient.GetId();
+      Assert.AreEqual(testId, result);
     }
   }
 }
