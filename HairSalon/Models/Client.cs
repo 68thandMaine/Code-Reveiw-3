@@ -68,7 +68,8 @@ namespace HairSalon.Models
       {
         conn.Dispose();
       }
-      return allClients;
+      List<Client> newList = new List<Client> {};
+      return newList;
     }
     public void Save()
     {
