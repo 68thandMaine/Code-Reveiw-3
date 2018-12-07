@@ -1,14 +1,16 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace HairSalon.Models
 {
   public class Client
   {
-    private string _name;    private int _id;
-        private int _employeeId;
+    private string _name;
+    private int _employeeId;
+    private int _id;
 
-    public Client(string clientName, int employeeId, int id=0)
+    public Client (string clientName, int employeeId, int id=0)
     {
       _name = clientName;
       _employeeId = employeeId;
@@ -21,12 +23,12 @@ namespace HairSalon.Models
     }
     public int GetId()
     {
-      return 0;
+      return _id;
     }
 
-    // public static List<Client> GetAll()
-    // {
-    //
-    // }
+    public static List<Client> GetAll()
+    {
+
+    }
   }
 }
