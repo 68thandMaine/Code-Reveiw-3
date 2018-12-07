@@ -25,6 +25,13 @@ _07 December, 2018_
   PASS:  
  >To pass this test our `public void  GetName()` should `return _name`.
 
+ ##### `SetName()`
+  FAIL
+    >To fail this test we will set the return value to any string other than what is being passed into the constructor in the test file. eg ... `_name = "robert";`
+
+  PASS
+  >To pass this test we will set method to `_name = newName;`
+
   ##### `GetId()`  
 
     FAIL:

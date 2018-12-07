@@ -23,7 +23,7 @@ namespace HairSalon.Models
     }
     public void SetName(string newName)
     {
-      _name = "robert";
+      _name = newName;
     }
     public int GetId()
     {
