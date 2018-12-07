@@ -23,5 +23,10 @@ namespace HairSalon.Models
     {
       return 0;
     }
+
+    // public static List<Client> GetAll()
+    // {
+    //
+    // }
   }
 }
