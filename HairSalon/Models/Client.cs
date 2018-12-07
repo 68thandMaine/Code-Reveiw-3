@@ -17,7 +17,11 @@ namespace HairSalon.Models
 
     public string GetName()
     {
-    return "gerald";
+    return _name;
+    }
+    public int GetId()
+    {
+      return 0;
     }
   }
 }
