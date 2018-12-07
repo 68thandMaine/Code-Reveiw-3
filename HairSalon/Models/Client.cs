@@ -59,7 +59,7 @@ namespace HairSalon.Models
       {
         int clientId = rdr.GetInt32(0);
         string clientName = rdr.GetString(1);
-        int clientStylistId = rdr.GetInt32(0);
+        int clientStylistId = rdr.GetInt32(2);
         Client newClient = new Client(clientName, clientStylistId, clientId);
         allClients.Add(newClient);
       }
@@ -70,28 +70,32 @@ namespace HairSalon.Models
       }
       return allClients;
     }
-    // public void Save()
-    // {
-    //   MySqlConnection conn = DB.Connection();
-    //   conn.Open();
-    //   MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-    //   cmd.CommandText=@"INSERT INTO clients (clientName, sylistId) VALUES (@ClientName, @stylistId);";
-    //   MySqlParameter name = new MySqlParameter();
-    //   name.ParameterName = "@clientName";
-    //   name.Value = this._name;
-    //   cmd.Parameters.Add(name);
-    //   MySqlParameter stylistId = new MySqlParameter();
-    //   stylistId.ParameterName = "@stylistId";
-    //   stylistId.Value = this._stylistId;
-    //   cmd.Parameters.Add(stylistId);
-    //   cmd.ExecuteNonQuery();
-    //   _id = (int) cmd.LastInsertedId;
-    //   conn.Close();
-    //   if(conn != null)
-    //   {
-    //     conn.Dispose();
-    //   }
-    // }
+    public void Save()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText=@"INSERT INTO clients (clientName, stylistId, id) VALUES (@ClientName, @stylistId, @id);";
+      MySqlParameter name = new MySqlParameter();
+      name.ParameterName = "@clientName";
+      name.Value = this._name;
+      cmd.Parameters.Add(name);
+      MySqlParameter id = new MySqlParameter();
+      id.ParameterName = "@id";
+      id.Value = this._id;
+      cmd.Parameters.Add(id);
+      MySqlParameter stylistId = new MySqlParameter();
+      stylistId.ParameterName = "@stylistId";
+      stylistId.Value = this._stylistId;
+      cmd.Parameters.Add(stylistId);
+      cmd.ExecuteNonQuery();
+      _id = (int) cmd.LastInsertedId;
+      conn.Close();
+      if(conn != null)
+      {
+        conn.Dispose();
+      }
+    }
 
 
   }
