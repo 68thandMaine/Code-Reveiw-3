@@ -87,7 +87,14 @@ FAIL:
 PASS:  
 >To pass this test, our `public void  GetName()` should `return _name`.
 
+##### `public overrride bool Equals()`
+_In order to compare objects made from the same constructor, we need an override so that our Equals method will see these objects as equivalent._
 
+FAIL  
+>To fail this test,  change the syntax in our override statement so that it returns false if two objects were created from the same constructor.
+
+PASS
+>To pass this test, alter the code so that if two objects were created from the same constructor, the for loop will set the values equal to each other so that `Equals` returns true.
 
 
 
