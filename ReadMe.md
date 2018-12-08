@@ -10,9 +10,9 @@ _07 December, 2018_
 
 ## Installation
 
-## Running the tests
-### Client Testing  
-1. The client is the child object in this application, thus it will be tested first.
+# Running the tests
+## Client Testing  
+ _The client is the child object in this application, thus it will be tested first._
 #### Test to see if the constructor creates an appropriate instance of the Client type.
 >We will not be able To fail this test, without a compile error, thus the only test we need is a passing test. A passing test means that .NET is working correctly.
 #### Test to see if the get methods return the correct values.
@@ -75,7 +75,12 @@ _07 December, 2018_
   >To fail this test, set the return to `public static Client Find(int id)` to a random hardcoded Client object.
 
   PASS
-  >To pass this test, open a MySqlConnection and use SQL queries to find Clients and return them based off of an Id. 
+  >To pass this test, open a MySqlConnection and use SQL queries to find Clients and return them based off of an Id.
+
+## Stylist Testing
+_After testing child objects, test parent objects with similar tests._
+
+
 
 
 
