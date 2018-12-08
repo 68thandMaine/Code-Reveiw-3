@@ -103,7 +103,13 @@ FAIL
 
 PASS
 >To pass this test, our  `public void Save()` will contain the code for connecting to the Database and the SQL commands necessary for saving to the database.
+##### `Find(int id)`
 
+FAIL
+>To fail this test, set the return to `public static Client Find(int id)` to a random hardcoded Stylist object.
+
+PASS
+>To pass this test, open a MySqlConnection and use SQL queries to find Stylists and return them based off of an Id.
 
 
 
