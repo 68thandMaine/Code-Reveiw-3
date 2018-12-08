@@ -10,7 +10,7 @@ namespace HairSalon.Tests
   {
     public void Dispose()
     {
-      // Stylist.ClearAll();
+      Stylist.ClearAll();
       // Client.ClearAll();
     }
     public StylistTest()
