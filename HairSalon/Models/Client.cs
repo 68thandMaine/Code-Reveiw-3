@@ -164,5 +164,10 @@ namespace HairSalon.Models
         conn.Dispose();
       }
     }
+    public int GetStylistId()
+    {
+      // return _stylistId;
+      return 0;
+    }
   }
 }
