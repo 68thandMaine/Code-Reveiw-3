@@ -96,6 +96,14 @@ FAIL
 PASS
 >To pass this test, alter the code so that if two objects were created from the same constructor, the for loop will set the values equal to each other so that `Equals` returns true.
 
+##### `Save()`
+
+FAIL
+>To fail this test, our   `public void Save()` will not have any logic inside of it. Voids do not need to return anything, so by not including code we can compile the code and fail the test.
+
+PASS
+>To pass this test, our  `public void Save()` will contain the code for connecting to the Database and the SQL commands necessary for saving to the database.
+
 
 
 

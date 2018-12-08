@@ -60,5 +60,11 @@ namespace HairSalon.Models
 
       return allStylists;
     }
+
+    public void Save()
+    {
+      
+    }
+
   }
 }
