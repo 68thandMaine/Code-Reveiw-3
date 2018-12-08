@@ -67,7 +67,15 @@ _07 December, 2018_
   >To fail this test, our   `public void Save()` will not have any logic inside of it. Voids do not need to return anything, so by not including code we can compile the code and fail the test.
 
   PASS
-  >To pass this test, our   `public void Save()` will contain the code for connecting to the Database and the SQL commands necessary for saving to the database.
+  >To pass this test, our  `public void Save()` will contain the code for connecting to the Database and the SQL commands necessary for saving to the database.
+
+  ##### `Find(int id)`
+
+  FAIL
+  >To fail this test, set the return to `public static Client Find(int id)` to a random hardcoded Client object.
+
+  PASS
+  >To pass this test, open a MySqlConnection and use SQL queries to find Clients and return them based off of an Id. 
 
 
 

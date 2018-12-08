@@ -142,6 +142,9 @@ namespace HairSalon.Models
      // Client newClient = new Client ("chris", 14);
      // return newClient;
     }
-
+    public void Edit(string newName)
+    {
+      
+    }
   }
 }
