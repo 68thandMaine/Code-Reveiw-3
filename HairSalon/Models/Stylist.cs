@@ -18,5 +18,9 @@ namespace HairSalon.Models
     {
       return _name;
     }
+    public int GetId()
+    {
+      return _id;
+    }
   }
 }

@@ -31,18 +31,7 @@ namespace HairSalon.Tests
       string result = "chris";
       Assert.AreEqual(newClient.GetName(), result);
     }
-    [TestMethod]
-    public void SetName_SetsName_String()
-    {
-      string name ="chris";
-      Client newClient = new Client (name, 1, 2);
 
-      string updatedName = "shaina";
-      newClient.SetName(updatedName);
-      string result = newClient.GetName();
-
-      Assert.AreEqual(updatedName, result);
-    }
     [TestMethod]
     public void GetId_ReturnsId_Int()
     {
