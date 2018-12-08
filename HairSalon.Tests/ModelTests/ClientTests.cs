@@ -40,7 +40,7 @@ namespace HairSalon.Tests
       Assert.AreEqual(newClient.GetId(), result);
     }
     [TestMethod]
-    public void Equals_ReturnsTrueIfDescriptionsAreTheSame_Item()
+    public void Equals_ReturnsTrueIfDescriptionsAreTheSame_Client()
     {
       // Arrange, Act
       Client firstClient = new Client("Mow the lawn",1,1);

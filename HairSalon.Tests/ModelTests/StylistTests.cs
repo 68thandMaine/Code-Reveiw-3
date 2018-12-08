@@ -50,5 +50,12 @@ namespace HairSalon.Tests
       int result = 0;
       Assert.AreEqual(newStylist.GetId(), result);
     }
+    [TestMethod]
+    public void Equals_ReturnsTrueIfDescriptionsAreTheSame_Stylist()
+    {
+      Stylist stylist1 = new Stylist ("Jenny");
+      Stylist stylist2 = new Stylist("Jenny");
+      Assert.AreEqual(stylist1, stylist2);
+    }
   }
 }
