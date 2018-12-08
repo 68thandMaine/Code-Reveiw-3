@@ -16,7 +16,7 @@ namespace HairSalon.Models
     }
     public string GetName()
     {
-      return "Sally";
+      return _name;
     }
   }
 }

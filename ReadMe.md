@@ -79,6 +79,14 @@ _07 December, 2018_
 
 ## Stylist Testing
 _After testing child objects, test parent objects with similar tests._
+##### `GetName()`  
+
+FAIL:  
+>To fail this test, our `public void  GetName()` returns a string that is not equivalent to the name passed into the Stylist constructor.  
+
+PASS:  
+>To pass this test, our `public void  GetName()` should `return _name`.
+
 
 
 
