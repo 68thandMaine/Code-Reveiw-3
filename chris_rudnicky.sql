@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 07, 2018 at 06:45 PM
+-- Generation Time: Dec 08, 2018 at 12:54 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -25,10 +25,10 @@ USE `chris_rudnicky`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `client`
+-- Table structure for table `clients`
 --
 
-CREATE TABLE `client` (
+CREATE TABLE `clients` (
   `id` int(11) NOT NULL,
   `clientName` varchar(255) NOT NULL,
   `stylistId` int(11) NOT NULL
@@ -50,9 +50,9 @@ CREATE TABLE `stylist` (
 --
 
 --
--- Indexes for table `client`
+-- Indexes for table `clients`
 --
-ALTER TABLE `client`
+ALTER TABLE `clients`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -66,10 +66,10 @@ ALTER TABLE `stylist`
 --
 
 --
--- AUTO_INCREMENT for table `client`
+-- AUTO_INCREMENT for table `clients`
 --
-ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `clients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `stylist`
