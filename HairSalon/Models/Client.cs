@@ -19,7 +19,7 @@ namespace HairSalon.Models
 
     public string GetName()
     {
-    return _name;
+      return _name;
     }
     public void SetName(string newName)
     {
@@ -114,37 +114,55 @@ namespace HairSalon.Models
     public static Client Find(int id)
     {
       MySqlConnection conn = DB.Connection();
-     conn.Open();
-     var cmd = conn.CreateCommand() as MySqlCommand;
-     cmd.CommandText = @"SELECT * FROM `clients` WHERE id =@thisId;";
-     MySqlParameter thisId = new MySqlParameter();
-     thisId.ParameterName = "@thisId";
-     thisId.Value = id;
-     cmd.Parameters.Add(thisId);
-     var rdr = cmd.ExecuteReader() as MySqlDataReader;
-     int clientId = 0;
-     string clientName ="";
-     int clientStylistId = 0;
-     while(rdr.Read())
-     {
-       clientId = rdr.GetInt32(0);
-       clientName = rdr.GetString(1);
-       clientStylistId = rdr.GetInt32(2);
-     }
-     Client foundClient = new Client(clientName, clientStylistId, clientId);
-     conn.Close();
-     if(conn != null)
-     {
-       conn.Dispose();
-     }
-     return foundClient;
-     // To fail:
-     // Client newClient = new Client ("chris", 14);
-     // return newClient;
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM `clients` WHERE id =@thisId;";
+      MySqlParameter thisId = new MySqlParameter();
+      thisId.ParameterName = "@thisId";
+      thisId.Value = id;
+      cmd.Parameters.Add(thisId);
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      int clientId = 0;
+      string clientName ="";
+      int clientStylistId = 0;
+      while(rdr.Read())
+      {
+        clientId = rdr.GetInt32(0);
+        clientName = rdr.GetString(1);
+        clientStylistId = rdr.GetInt32(2);
+      }
+      Client foundClient = new Client(clientName, clientStylistId, clientId);
+      conn.Close();
+      if(conn != null)
+      {
+        conn.Dispose();
+      }
+      return foundClient;
+      // To fail:
+      // Client newClient = new Client ("chris", 14);
+      // return newClient;
     }
     public void Edit(string newName)
     {
-      
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"UPDATE clients SET clientName = @newName WHERE id = @searchId;";
+      MySqlParameter searchId = new MySqlParameter();
+      searchId.ParameterName = "@searchId";
+      searchId.Value = _id;
+      cmd.Parameters.Add(searchId);
+      MySqlParameter name = new MySqlParameter();
+      name.ParameterName = "@newName";
+      name.Value = newName;
+      cmd.Parameters.Add(name);
+      cmd.ExecuteNonQuery();
+      _name = newName;
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
     }
   }
 }
