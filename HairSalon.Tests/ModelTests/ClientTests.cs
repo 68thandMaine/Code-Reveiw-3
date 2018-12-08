@@ -87,7 +87,7 @@ namespace HairSalon.Tests
       List<Client> result = Client.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-    
+
     [TestMethod]
     public void Save_AssignsIdToObject_Id()
     {
@@ -97,6 +97,14 @@ namespace HairSalon.Tests
       int result = savedClient.GetId();
       int testId = newClient.GetId();
       Assert.AreEqual(testId, result);
+    }
+    [TestMethod]
+    public void Find_ReturnsCorrectClient_Client()
+    {
+      Client newClient = new Client ("chris", 1);
+      newClient.Save();
+      Client foundClient = Client.Find(newClient.GetId());
+      Assert.AreEqual(newClient, foundClient);
     }
   }
 }
