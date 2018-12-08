@@ -57,5 +57,12 @@ namespace HairSalon.Tests
       Stylist stylist2 = new Stylist("Jenny");
       Assert.AreEqual(stylist1, stylist2);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyListFromDatabase_StylistList()
+    {
+      List<Stylist> newList = new List<Stylist> { };
+      List<Stylist> result = Stylist.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

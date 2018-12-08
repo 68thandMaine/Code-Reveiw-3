@@ -25,7 +25,7 @@ namespace HairSalon.Models
 
     public override bool Equals(System.Object otherStylist)
     {
-      if((otherStylist is Stylist))
+      if(!(otherStylist is Stylist))
       {
         return false;
       }
@@ -35,6 +35,31 @@ namespace HairSalon.Models
         bool idEquality = this.GetId().Equals(newStylist.GetId());
         return (idEquality);
       }
+    }
+
+    public static List<Stylist> GetAll()
+    {
+      // List<Stylist> allStylists = new List<Stylist> {};
+      // MySqlConnection conn = DB.Connection();
+      // conn.Open();
+      // var cmd = conn.CreateCommand() as MySqlCommand;
+      // cmd.CommandText=@"SELECT * FROM stylist;";
+      // var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      // while(rdr.Read())
+      // {
+      //   int StylistId = rdr.GetInt32(0);
+      //   string StylistName = rdr.GetString(1);
+      //   Stylist newStylist = new Stylist(StylistName, StylistId);
+      //   allStylists.Add(newStylist);
+      // }
+      // conn.Close()
+      // if(conn != null)
+      // {
+      //   conn.Dispose();
+      // }
+      Stylist hannah = new Stylist("hannah");
+      List<Stylist> allStylists = new List<Stylist> { hannah };
+      return allStylists;
     }
   }
 }
