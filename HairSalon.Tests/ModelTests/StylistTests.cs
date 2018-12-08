@@ -65,7 +65,16 @@ namespace HairSalon.Tests
       CollectionAssert.AreEqual(newList, result);
     }
     [TestMethod]
-    public void Saves_SavesToDataBase_StylistList()
+    public void Saves_SavesToDatabase_StylistList()
+    {
+      Stylist newStylist = new Stylist("chris");
+      newStylist.Save();
+      List<Stylist> result = Stylist.GetAll();
+      List<Stylist> testList = new List<Stylist>{newStylist};
+      CollectionAssert.AreEqual(testList, result);
+    }
+    [TestMethod]
+    public void Save_AssignsIdToObject_Id()
     {
       Stylist newStylist = new Stylist("Hannah");
       newStylist.Save();
@@ -73,6 +82,17 @@ namespace HairSalon.Tests
       int result = savedStylist.GetId();
       int testId = newStylist.GetId();
       Assert.AreEqual(testId, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsStylist_StylistList()
+    {
+      Stylist newStylist1 = new Stylist ("Hannah");
+      newStylist1.Save();
+      Stylist newStylist2 = new Stylist ("Shaina");
+      newStylist2.Save();
+      List<Stylist> newList = new List<Stylist> {newStylist1, newStylist2};
+      List<Stylist> result = Stylist.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
