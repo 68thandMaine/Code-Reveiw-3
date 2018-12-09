@@ -1,0 +1,17 @@
+@{
+Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>@Model["client"].GetName()</h1>
+  <h3>Stylist:@Model["stylist"].GetName()</h3>
+
+  <a href="/stylists/@Model["stylist"].GetId()/clients/@Model["client"].GetId()/edit">Edit this clients information</a>
+
+  <form action="/clients/delete" method="post">
+  <button type="submit" name ="button">Clear all scheduled clients</button>
+  </form>
+
+  <a href="/stylists/@Model["stylist"].GetId()/clients/new">Add a new client</a>
+  <a href='/stylists'>View all stylists</a>
+</div>
