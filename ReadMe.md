@@ -15,7 +15,9 @@ Because all controllers need three tests, this document will only document three
   PASS
   >To pass a test for this, set the return value of`public ActionRestult Index()` to `return View();`.
 
-2. The 
+2. The controller must be able to return the correct datatype to the View
+
+3. 
 
 
 ## Description
