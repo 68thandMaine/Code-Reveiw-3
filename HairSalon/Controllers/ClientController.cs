@@ -7,35 +7,54 @@ namespace HairSalon.Controllers
 {
   public class ClientController : Controller
   {
-    [HttpGet("/clients")]
-    public ActionResult Index()
+    // [HttpGet("/clients")]
+    // public ActionResult Index()
+    // {
+    //   List<Clients> allClients = Client.GetAll();
+    //   return View(allClients);
+    // }
+    [HttpGet("/stylists/{stylistId}/clients/{clientId}")]
+    public ActionResult Show(int stylistId, int clientId)
     {
-      List<Clients> allStylists = Stylist.GetAll();
-      return View(allStylists);
-    }
-    [HttpGet("/clients/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
-    [HttpPost("/clients")]
-    public ActionResult Create(string stylistName)
-    {
-      Stylist newStylist = new Stylist (stylistName);
-      newStylist.Save();
-      List<Stylist> allStylists = Stylist.GetAll();
-      return RedirectToAction("Index");
-      // return View("Index", allStylists);
-    }
-    [HttpGet("/clients/{id}")]
-    public ActionResult Show(int id)
-    {
+      Client client = Client.Find(clientId);
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Stylist selectedStylist = Stylist.Find(id);
-      List<Client> stylistClients = selectedStylist.GetClients();
-      model.Add("stylist", selectedStylist);
-      model.Add("clients", stylistClients);
+      Stylist stylist = Stylist.Find(stylistId);
+      model.Add("client", client);
+      model.Add("stylist", stylist);
       return View(model);
     }
+    [HttpGet("/stylists/{stylistId}/clients/new")]
+    public ActionResult New(int stylistId)
+    {
+      Stylist stylist = Stylist.Find(stylistId);
+      returnView(stylist);
+    }
+    [HttpPost("/clients/delete")]
+    public ActionResult DeleteAll()
+    {
+      Client.ClearAll();
+      return View();
+    }
+    [HttpGet("/stylists/{stylistId}/clients/{clientId}/edit")]
+    public ActionResult Edit(int stylistId, int clientId)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Stylist stylist = Stylist.Find(stylistId);
+      model.Add("stylist", stylist);
+      Client client = Client.Find(clientId);
+      model.Add("client", client);
+      return View(model);
+    }
+    [HttpPost("/stylists/{stylistId}/clients/{clientsId}")]
+    public ActionResult Update(int stylistId, int clientId, string newName)
+    {
+      Client client = Client.Find(clientId);
+      client.Edit(newName);
+      Dictionary<string, object> model = new Dictionary<string, object> ();
+      Stylist stylist = Stylist.Find(stylistId);
+      model.Add("stylist", stylist);
+      model.Add("client", client);
+      return View("Show", model);
+    }
+    }
   }
-}
