@@ -111,7 +111,14 @@ FAIL
 PASS
 >To pass this test, open a MySqlConnection and use SQL queries to find Stylists and return them based off of an Id.
 
+##### `GetClients()`
+_The GetClients method will match clients to stylists (child to parent) through matching primary keys and foreign keys_
 
+FAIL  
+>To fail this test have GetClients return an empty list and compare the empty list to a list that is hardcoded with clients.
+
+PASS
+>To pass this test, simply create a connection to the database and use a SQL command to search all columns in the child object table when stylist Ids match.
 
 ## Known Errors
 

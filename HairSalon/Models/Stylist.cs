@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System;
 
+
 namespace HairSalon.Models
 {
   public class Stylist
@@ -9,7 +10,7 @@ namespace HairSalon.Models
     private string _name;
     private int _id;
 
-    public Stylist(string stylistName, int id=0)
+    public Stylist (string stylistName, int id=0)
     {
       _name = stylistName;
       _id = id;
@@ -57,7 +58,6 @@ namespace HairSalon.Models
       {
         conn.Dispose();
       }
-
       return allStylists;
     }
 
@@ -118,6 +118,34 @@ namespace HairSalon.Models
         conn.Dispose();
       }
       return newStylist;
+    }
+
+    public List<Client> GetClients()
+    {
+      List<Client> allStylistClients = new List<Client> {};
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"SELECT * FROM clients WHERE stylistId = @stylistId;";
+      MySqlParameter stylistId = new MySqlParameter ();
+      stylistId.ParameterName = "@stylistId";
+      stylistId.Value = this._id;
+      cmd.Parameters.Add(stylistId);
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      while(rdr.Read())
+      {
+        int clientId = rdr.GetInt32(0);
+        string clientName = rdr.GetString(1);
+        int clientStylistId = rdr.GetInt32(2);
+        Client newClient = new Client(clientName, clientStylistId, clientId);
+        allStylistClients.Add(newClient);
+      }
+      conn.Close();
+      if (conn != null)
+      {
+        conn.Dispose();
+      }
+      return allStylistClients;
     }
   }
 }
