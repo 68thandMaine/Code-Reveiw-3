@@ -7,7 +7,7 @@
 // namespace HairSalon.Tests
 // {
 //   [TestClass]
-//   public class ClientControllerTest
+//   public class ClientControllerTests
 //   {
 //
 //   }
