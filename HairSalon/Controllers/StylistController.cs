@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace HairSalon.Controllers
 {
-  public class StylistController : Controllers
+  public class StylistController : Controller
   {
     [HttpGet("/stylists")]
     public ActionResult Index()
@@ -12,10 +12,10 @@ namespace HairSalon.Controllers
       List<Stylist> allStylists = Stylist.GetAll();
       return View(allStylists);
     }
-    [HttpGet("/stylist/new")]
-    public ActionResult New()
-    {
-      
-    }
+    // [HttpGet("/stylist/new")]
+    // public ActionResult New()
+    // {
+    //
+    // }
   }
 }
