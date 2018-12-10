@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace HairSalon.Controllers
 {
-  public class ClientController : Controller
+  public class ClientsController : Controller
   {
     // [HttpGet("/clients")]
     // public ActionResult Index()
@@ -27,7 +27,7 @@ namespace HairSalon.Controllers
     public ActionResult New(int stylistId)
     {
       Stylist stylist = Stylist.Find(stylistId);
-      return View(stylist);
+      return View();
     }
     [HttpPost("/clients/delete")]
     public ActionResult DeleteAll()
