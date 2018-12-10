@@ -1,35 +1,36 @@
-# Haircountablitity
+# Haircountability
 ### _Designed By_
 _Chris Rudnicky_   
 _07 December, 2018_
 
 ---
-## Controller Testing
-Because all controllers need three tests, this document will only document three tests. It can be assumed that all controllers were tested before releasing this app using the applicable tests from below.
 
-1. The controller must be able to return to the correct view.  
+*Haircountability* is a time management MVC application intended for use with hair salons.
 
-  FAIL:  
->To fail a test for this, set the return value of `public ActionRestult Index()` to `return new EmptyResult`.  
+Managing the clients that each stylist sees in a given day is not an easy task. With *Haircountability* you can easily assign clients to different employees at your hair salon to improve scheduling efficiency and reduce overall labor cost.
 
-  PASS
-  >To pass a test for this, set the return value of`public ActionRestult Index()` to `return View();`.
-
-2. The controller must be able to return the correct datatype to the View
-
-3.
-
-
-## Description
-> *Haircountablitity* is a MVC application that uses a one to many relational database to assign clients to stylists at a hair salon.
 
 ## Installation
+#### To Build Haircountability
+1. Open a new command line and clone this repo with the following command:  
+  >`$ git clone https://github.com/68thandMaine/hairsalon.git`
+2. Navigate to the HairSalon folder, install packages, and build the app with the following commands.
+  >`$ cd HairSalon.Solution`  
+  >`$ cd HairSalon`  
+  >`$ dotnet restore`  
+  >`$ dotnet build`  
+
+#### Setup Databases
+  _**Haircountability** uses SQL databases to manage client/stylist relations. To use **Haircountability** you will need to:_
+  1. Install [MAMP](https://www.mamp.info/en/downloads/). MAMP will attempt to install both MAMP and MAMP pro, the latter of which requires a subscription. For **Haircountability** to run we only need MAMP. For detailed instructions for how to configure MAMP settings click [here](https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-and-configuring-mamp).  
+  2. Open MAMP and start servers.
+
 
 # Running the tests
 ## Client Testing  
  _The client is the child object in this application, thus it will be tested first._
 
-[I'm a relative reference to a repository file](../master/SqlCommands.md)
+[SqlCommands](../master/SqlCommands.md)
 
 ## Known Errors
 
