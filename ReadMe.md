@@ -29,7 +29,7 @@ Because all controllers need three tests, this document will only document three
 ## Client Testing  
  _The client is the child object in this application, thus it will be tested first._
 
-[I'm a relative reference to a repository file](../ReadMeFiles/SqlCommands.md)
+[I'm a relative reference to a repository file](../blob/master/SqlCommands.md)
 
 ## Known Errors
 
