@@ -17,7 +17,7 @@ Because all controllers need three tests, this document will only document three
 
 2. The controller must be able to return the correct datatype to the View
 
-3. 
+3.
 
 
 ## Description
@@ -29,7 +29,7 @@ Because all controllers need three tests, this document will only document three
 ## Client Testing  
  _The client is the child object in this application, thus it will be tested first._
 
-
+[I'm a relative reference to a repository file](../ReadMeFiles/SqlCommands.md)
 
 ## Known Errors
 
