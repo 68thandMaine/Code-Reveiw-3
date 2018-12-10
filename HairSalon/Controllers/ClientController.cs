@@ -27,7 +27,7 @@ namespace HairSalon.Controllers
     public ActionResult New(int stylistId)
     {
       Stylist stylist = Stylist.Find(stylistId);
-      return View();
+      return View(stylist);
     }
     [HttpPost("/clients/delete")]
     public ActionResult DeleteAll()
