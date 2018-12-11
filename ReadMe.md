@@ -7,6 +7,7 @@ _07 December, 2018_
 *Haircountability* is a time management MVC application intended for use with hair salons.
 Managing the clients that each stylist sees in a given day is not an easy task.   
 With *Haircountability* you can easily assign clients to different employees at your hair salon to improve scheduling efficiency and reduce overall labor cost.
+
 ---
 ## Table of Contents
 **[Installation Instructions](#installation-instructions)**<br>
