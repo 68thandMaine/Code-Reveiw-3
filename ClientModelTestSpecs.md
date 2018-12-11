@@ -1,15 +1,15 @@
+# Client Testing
+<sup> **Developer Note**: As of Dec 12, 2018 I have not finished testing all of these specs.</sup>  
 
-
-
-## Client Testing  
- _The client is the child object in this application, thus it will be tested first._
-
+The Client object is the child object in this application. Tests were written for Client objects before Stylist objects and controller testing. For a method to be considered ready for use in production code, it must first fail an `AreEqual()` test, then code must be added so that it will pass the `AreEqual()` test.
+###### _[Return to ReadMe](../master/ReadMe.md)_
+---
 
 #### Test to see if the constructor creates an appropriate instance of the Client type.
 >We will not be able To fail this test, without a compile error, thus the only test we need is a passing test. A passing test means that .NET is working correctly.
 #### Test to see if the get methods return the correct values.
 
-  ##### `GetName()`  
+  ### `GetName()`  
 
   FAIL:  
 >To fail this test, our `public void  GetName()` returns a string that is not equivalent to the name passed into the Client constructor.  
@@ -17,14 +17,14 @@
   PASS:  
  >To pass this test, our `public void  GetName()` should `return _name`.
 
- ##### `SetName()`
+ ### `SetName()`
   FAIL
     >To fail this test, we will set the return value to any string other than what is being passed into the constructor in the test file. eg ... `_name = "robert";`
 
   PASS
   >To pass this test, we will set method to `_name = newName;`
 
-  ##### `GetId()`  
+  ### `GetId()`  
 
   FAIL:
  >To fail this test, our `public void  GetId()` returns an integer that is not equivalent to the name passed into the Client constructor.  

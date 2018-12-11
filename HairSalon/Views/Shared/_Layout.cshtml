@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+        <meta charset="utf-8">
     <title>Haircountabliity</title>
-    <link rel='stylesheet' href='~/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/wwwroot/css/bootstrap.min.css' />
     <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
   </head>
   <body>
-
     <div class="container">
-      @RenderBody()
+      <div class="row">
+        <div class="column-sm" id="bod">
+          
+          @RenderBody()
+        </div>
+      </div>
     </div>
-
   </body>
 </html>

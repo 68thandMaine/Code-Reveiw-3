@@ -1,0 +1,11 @@
+div#hello {
+position: fixed;
+  bottom:80px;
+   left:10px;
+   width:100%;
+   color:#CCC;
+   background:#333;
+   padding:8px;}
+div#bod {
+  border-style: solid;
+}

@@ -116,5 +116,7 @@ namespace HairSalon.Tests
       List<Client> resultClientList = testStylist.GetClients();
     CollectionAssert.AreEqual(testClientList, resultClientList);
     }
+
+    [TestMethod]
   }
 }
