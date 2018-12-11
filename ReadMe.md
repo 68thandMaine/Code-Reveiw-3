@@ -9,6 +9,7 @@ _07 December, 2018_
 
 Managing the clients that each stylist sees in a given day is not an easy task. With *Haircountability* you can easily assign clients to different employees at your hair salon to improve scheduling efficiency and reduce overall labor cost.
 
+---
 
 ## Installation
 #### To Build Haircountability
@@ -24,9 +25,16 @@ Managing the clients that each stylist sees in a given day is not an easy task. 
   _**Haircountability** uses SQL databases to manage client/stylist relations. To use **Haircountability** you will need to:_
   1. Install [MAMP](https://www.mamp.info/en/downloads/). MAMP will attempt to install both MAMP and MAMP pro, the latter of which requires a subscription. For **Haircountability** to run we only need MAMP. For detailed instructions for how to configure MAMP settings click [here](https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-and-configuring-mamp).  
   2. Open MAMP and start servers.
+  3. Using myPHPAdmin, import the database named chris_rudnicky.
 
+#### Run the application  
+- After building the application and setting up the application enter the following command into the termnial while in the `ToDoList` subdirectory:  
+  >` $dotnet run`
+
+###### Haircountability should build and run correctly!
 
 # Running the tests
+
 ## Client Testing  
  _The client is the child object in this application, thus it will be tested first._
 
