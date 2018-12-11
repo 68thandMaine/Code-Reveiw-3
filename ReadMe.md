@@ -16,6 +16,7 @@ With *Haircountability* you can easily assign clients to different employees at 
 **[Technologies Used](#technologies-used)**<br>
 **[Acknowledgements](#acknowledgements)**<br>
 **[Additional Resources](#additional-resources)**<br>
+
 ---
 ## Installation Instructions
 ### To Build Haircountability
