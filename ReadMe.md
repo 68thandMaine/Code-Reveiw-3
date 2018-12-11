@@ -7,7 +7,15 @@ _07 December, 2018_
 *Haircountability* is a time management MVC application intended for use with hair salons.
 Managing the clients that each stylist sees in a given day is not an easy task.   
 With *Haircountability* you can easily assign clients to different employees at your hair salon to improve scheduling efficiency and reduce overall labor cost.
-
+---
+## Table of Contents
+**[Installation Instructions](#installation-instructions)**<br>
+**[Usage Instructions](#usage-instructions)**<br>
+**[Application Testing](#application-testing)**<br>
+**[Known Errors](#known-errors)**<br>
+**[Technologies Used](#technologies-used)**<br>
+**[Acknowledgements](#acknowledgements)**<br>
+**[Additional Resources](#additional-resources)**<br>
 ---
 ## Installation Instructions
 ### To Build Haircountability
@@ -65,7 +73,7 @@ Below is a complete list of all technologies used to build **Haircountability**:
 ## Acknowledgements
 - **Haircountability**  was based off of the Epicodus C# independent project for [Database Basics](https://www.learnhowtoprogram.com/c/database-basics-ee7c9fd3-fcd9-4fff-8b1d-5ff7bfcbf8f0/database-basics-independent-project-3a443c65-946b-43eb-ad00-96aca5bca3d2). Without guidance from the objectives and the previous lessons used to create a To Do List, I would not have been able to create this project.   
 - Additionally, the [work flow markdown file that Tanvi Garg](https://github.com/TanviCodeLife/to-do-list-mvc/blob/master/WorkFlow.md) wrote proved especially helpfu l for planning my methods and controller routes.
-- github user [adam-p](https://github.com/adam-p/markdown-here/blob/master/README.md#troubleshooting) whose file on ReadMe's and [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists)were invaluable tools for designing this ReadMe.
+- github user [adam-p](https://github.com/adam-p/markdown-here/blob/master/README.md) whose file on ReadMe's and [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)were invaluable tools for designing this ReadMe.
 
 ---
 ## Additional Resources
